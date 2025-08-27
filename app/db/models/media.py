@@ -23,6 +23,7 @@ class Media(Base):
     section_order = Column(Integer, nullable=True)
     language = Column(String, nullable=True)
     path = Column(Text, nullable=False)
-    metadata = Column(JSON, nullable=True)
+    # 'metadata' è riservato in SQLAlchemy; usiamo attributo 'meta' con colonna 'metadata'
+    meta = Column("metadata", JSON, nullable=True)
 
     created_at = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)

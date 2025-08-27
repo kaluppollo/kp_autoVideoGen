@@ -19,7 +19,7 @@ def add_media(
         path=path,
         section_order=section_order,
         language=language,
-        metadata=metadata,
+        meta=metadata,
     )
     db.add(item)
     db.commit()
