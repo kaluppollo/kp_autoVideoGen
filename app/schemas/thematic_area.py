@@ -13,6 +13,13 @@ class ThematicAreaCreate(ThematicAreaBase):
     pass
 
 
+class ThematicAreaUpdate(BaseModel):
+    name: Optional[str] = None
+    primary_social: Optional[str] = None
+    logo_url: Optional[HttpUrl] = None
+    api_keys: Optional[Dict[str, str]] = None
+
+
 class ThematicArea(ThematicAreaBase):
     id: int
 
